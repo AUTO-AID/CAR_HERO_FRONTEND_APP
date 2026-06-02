@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import {
   View,
   Text,
@@ -35,29 +36,29 @@ export default function AuthScreen({ onContinueToOtp, onBackToWelcome }) {
     // 👇👇👇 هنا نستدعي API
     //
     // مثال:
-    // fetch(`https://api.example.com/auth/${mode}`, {
+    //fetch(`http://localhost:3001/api/v1/auth/register`, {
     //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     fullName,
-    //     phone,
-    //     password,
-    //     carType,
-    //   }),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
+    //  headers: { "Content-Type": "application/json" },
+   //    body: JSON.stringify({
+   //      fullName,
+     //    phone,
+       //  password,
+         //carType,
+   //    }),
+     //})
+       //.then((res) => res.json())
+    //  .then((data) => {
     //     // backend يرسل OTP إلى رقم الهاتف
     //     // ثم ننتقل لشاشة إدخال الرمز:
-    //     onContinueToOtp?.({ phone, mode, carType });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     Alert.alert("خطأ", "حدث خطأ أثناء الاتصال بالخادم.");
-    //   });
+      //   onContinueToOtp?.({ phone, mode, carType });
+       //})
+      //.catch((err) => {
+       // console.log(err);
+       // Alert.alert("خطأ", "حدث خطأ أثناء الاتصال بالخادم.");
+      //});
 
     // للتجربة فقط بدون API:
-    onContinueToOtp?.({ phone, mode, carType });
+    ionContinueToOtp?.({ phone, mode, carType });
   };
 
   return (
